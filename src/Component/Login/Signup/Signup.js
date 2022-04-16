@@ -50,7 +50,7 @@ const Signup = () => {
 
     return (
         <div style={{ height: '100vw' }} className='w-50 mx-auto mt-5'>
-            <h2 className='mb-5'> Please Sign-up</h2>
+            <h2 className='mb-5 text-primary'> Please Sign-up</h2>
             <Form onSubmit={handleSignup}>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label>Name</Form.Label>

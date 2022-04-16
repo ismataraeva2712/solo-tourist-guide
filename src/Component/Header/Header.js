@@ -14,7 +14,7 @@ const Header = () => {
         <div >
             <Navbar bg="primary" expand="lg">
                 <Container>
-                    <Navbar.Brand as={Link} to="/home" className='text-white fw-bold'>Tourist-Guide-Site</Navbar.Brand>
+                    <Navbar.Brand as={Link} to="/home" className='text-white fw-bold'>Solo-Tourist-Guide</Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="ms-auto">

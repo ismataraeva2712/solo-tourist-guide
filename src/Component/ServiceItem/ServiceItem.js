@@ -1,7 +1,9 @@
 import React from 'react';
 import { Button, Card, } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
 import './ServiceItem.css'
 const ServiceItem = ({ serviceItem }) => {
+    const navigate = useNavigate()
     const { name, picture, description, price } = serviceItem
     return (
         <div className='col-12 col-md-6 col-lg-4 g-5'>
@@ -16,7 +18,7 @@ const ServiceItem = ({ serviceItem }) => {
                     <Card.Text className='fw-bold'>
                         Package Fee : per person ${price}
                     </Card.Text>
-                    <Button variant="primary" className="text-white fw-bold ">Checkout</Button>
+                    <Button onClick={() => navigate('/checkout')} variant="primary" className="text-white fw-bold ">Checkout</Button>
                 </Card.Body>
 
             </Card>

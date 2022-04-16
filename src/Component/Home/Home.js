@@ -19,7 +19,7 @@ const Home = () => {
                         alt="First slide"
                     />
                     <Carousel.Caption>
-                        <h3>Tourist-Guide-Site with Foreign trip</h3>
+                        <h3>Solo-Tourist-Guide with Foreign trip</h3>
                         <p>Evrey year I arrange 3 Foreign trip   </p>
                     </Carousel.Caption>
                 </Carousel.Item>
@@ -31,7 +31,7 @@ const Home = () => {
                     />
 
                     <Carousel.Caption>
-                        <h3>Tourist-Guide-Site with Deshi Sea trip</h3>
+                        <h3>Solo-Tourist-Guide with Deshi Sea trip</h3>
                         <p>Available package for sea trip</p>
                     </Carousel.Caption>
                 </Carousel.Item>
@@ -43,7 +43,7 @@ const Home = () => {
                     />
 
                     <Carousel.Caption>
-                        <h3>Tourist-Guide-Site with Deshi Hill trip</h3>
+                        <h3>Solo-Tourist-Guide with Deshi Hill trip</h3>
                         <p>Raniy season and winter season i provide some hill trip package</p>
                     </Carousel.Caption>
                 </Carousel.Item>

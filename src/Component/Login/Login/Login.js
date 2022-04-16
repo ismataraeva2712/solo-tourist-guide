@@ -2,7 +2,7 @@ import { async } from '@firebase/util';
 import React, { useRef } from 'react';
 import { Button, Form } from 'react-bootstrap';
 import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
 import Loading from '../Loading/Loading';
 import { ToastContainer, toast } from 'react-toastify';
@@ -11,6 +11,8 @@ const Login = () => {
     const emailRef = useRef('')
     const passwordRef = useRef('')
     const navigate = useNavigate()
+    let location = useLocation();
+    let from = location.state?.from?.pathname || "/";
     const [
         signInWithEmailAndPassword,
         user,
@@ -21,7 +23,8 @@ const Login = () => {
         auth
     );
     if (user) {
-        navigate('/home')
+        navigate(from, { replace: true });
+        console.log(user)
     }
     let errorText;
     if (error || error1) {
@@ -49,7 +52,7 @@ const Login = () => {
     }
     return (
         <div style={{ height: '100vw' }} className='w-50 mx-auto mt-5'>
-            <h2 className='mb-5'> Please Login</h2>
+            <h2 className='mb-5 text-primary'> Please Login</h2>
             <Form onSubmit={handleLogin}>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label>Email address</Form.Label>
@@ -62,7 +65,7 @@ const Login = () => {
                 </Form.Group>
                 <p className='text-danger'>{errorText}</p>
                 <Button variant="primary" type="submit">
-                    Submit
+                    Login
                 </Button>
             </Form>
             <p className='mt-3'>New in Tourist-guide-site ? please <span> <Link className='text-decoration-none' to='/signup'>sign up</Link> </span></p>
