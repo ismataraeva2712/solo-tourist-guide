@@ -3,6 +3,7 @@ import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import About from './Component/About/About';
 import Blog from './Component/Blog/Blog';
+import Footer from './Component/Footer/Footer';
 
 import Header from './Component/Header/Header';
 import Home from './Component/Home/Home';
@@ -19,6 +20,7 @@ function App() {
         <Route path='/blog' element={<Blog></Blog>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
       </Routes>
+      <Footer></Footer>
 
     </div>
   );

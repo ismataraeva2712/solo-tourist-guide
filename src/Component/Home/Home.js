@@ -1,16 +1,14 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
-import { Carousel } from 'react-bootstrap';
+import { Carousel, Container, Row } from 'react-bootstrap';
 import sea2 from '../../img/sea2.jpg'
 import hill1 from '../../img/hill1.jpg'
 import sea1 from '../../img/sea1.jpg'
+import useService from '../../Hooks/useService';
+import ServiceItem from '../ServiceItem/ServiceItem';
 const Home = () => {
-    const [service, setService] = useState([])
-    useEffect(() => {
-        fetch('data.json')
-            .then(res => res.json())
-            .then(data => setService(data)
-    }, [])
+
+    const [service, setService] = useService()
     return (
         <div>
             <Carousel>
@@ -51,7 +49,20 @@ const Home = () => {
                 </Carousel.Item>
             </Carousel>
             <div>
-                {service.length}
+                <h2 className='text-primary mt-5'>Tour package service</h2>
+                <Container>
+                    <Row>
+                        {
+                            service.map(serviceItem => <ServiceItem
+                                key={serviceItem.id}
+                                serviceItem={serviceItem}
+
+                            ></ServiceItem>)
+                        }
+                    </Row>
+                </Container>
+
+
             </div>
 
 
