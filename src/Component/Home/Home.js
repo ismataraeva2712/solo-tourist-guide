@@ -49,7 +49,7 @@ const Home = () => {
                 </Carousel.Item>
             </Carousel>
             <div>
-                <h2 className='text-primary mt-5'>Tour package service</h2>
+                <h2 className='text-primary mt-5 text-center'>Tour package service</h2>
                 <Container>
                     <Row>
                         {

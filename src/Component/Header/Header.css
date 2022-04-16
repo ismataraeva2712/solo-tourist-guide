@@ -28,3 +28,8 @@
 .link:hover {
     color: white;
 }
+
+button {
+    text-decoration: none;
+    margin-left: 200px;
+}
