@@ -1,10 +1,16 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 import { Carousel } from 'react-bootstrap';
 import sea2 from '../../img/sea2.jpg'
 import hill1 from '../../img/hill1.jpg'
 import sea1 from '../../img/sea1.jpg'
 const Home = () => {
+    const [service, setService] = useState([])
+    useEffect(() => {
+        fetch('data.json')
+            .then(res => res.json())
+            .then(data => setService(data)
+    }, [])
     return (
         <div>
             <Carousel>
@@ -44,6 +50,12 @@ const Home = () => {
                     </Carousel.Caption>
                 </Carousel.Item>
             </Carousel>
+            <div>
+                {service.length}
+            </div>
+
+
+
         </div>
     );
 };
