@@ -66,7 +66,7 @@ const Home = () => {
                 </Container>
             </div>
             <div>
-                <h2 className='text-primary mt-5 text-center'>Upcoming serprising events</h2>
+                <h2 className='text-primary mt-5 text-center'>Upcoming surprising events</h2>
                 <Container>
 
                     <Row>
