@@ -5,6 +5,8 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link, NavLink } from 'react-router-dom';
 import auth from '../../firebase.init';
 import './Header.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faUmbrellaBeach } from '@fortawesome/free-solid-svg-icons'
 const Header = () => {
     const [user] = useAuthState(auth);
     const handleLogout = () => {
@@ -14,7 +16,9 @@ const Header = () => {
         <div >
             <Navbar bg="primary" expand="lg">
                 <Container>
-                    <Navbar.Brand as={Link} to="/home" className='text-white fw-bold'>Solo-Tourist-Guide</Navbar.Brand>
+                    <Navbar.Brand as={Link} to="/home" className='text-white fw-bold'>
+                        <FontAwesomeIcon style={{ height: '30px' }} className='me-2 ' icon={faUmbrellaBeach} />
+                        Solo-Tourist-Guide</Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="ms-auto">

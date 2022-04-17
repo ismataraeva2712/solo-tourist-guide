@@ -1,10 +1,11 @@
 import React from 'react';
 import { Button, Card } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faArrowRightLong } from '@fortawesome/free-solid-svg-icons'
 const Event = ({ event }) => {
     const navigate = useNavigate()
-    const { name, description, picture, price, date } = event
+    const { name, description, picture, price, date, id } = event
     return (
         <div className='col-12 col-md-6 col-lg-4 g-5'>
 
@@ -23,7 +24,7 @@ const Event = ({ event }) => {
                         {description}
                     </Card.Text>
 
-                    <Button onClick={() => navigate('/checkout')} variant="primary" className="text-white fw-bold rounded-pill px-3 ">Booking</Button>
+                    <Button onClick={() => navigate(`/checkout/${id}`)} variant="primary" className="text-white fw-bold rounded-pill px-3 "><FontAwesomeIcon style={{ height: '' }} className='' icon={faArrowRightLong} /> Booking</Button>
                 </Card.Body>
 
             </Card>

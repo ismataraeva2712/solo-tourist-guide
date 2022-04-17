@@ -2,9 +2,11 @@ import React from 'react';
 import { Button, Card, } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 import './ServiceItem.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faArrowRightLong } from '@fortawesome/free-solid-svg-icons'
 const ServiceItem = ({ serviceItem }) => {
     const navigate = useNavigate()
-    const { name, picture, description, price } = serviceItem
+    const { name, picture, description, price, id } = serviceItem
     return (
         <div className='col-12 col-md-6 col-lg-4 g-5'>
 
@@ -18,7 +20,7 @@ const ServiceItem = ({ serviceItem }) => {
                     <Card.Text className='fw-bold'>
                         Package Fee : per person ${price}
                     </Card.Text>
-                    <Button onClick={() => navigate('/checkout')} variant="primary" className="text-white fw-bold rounded-pill px-3 ">Checkout</Button>
+                    <Button onClick={() => navigate(`/checkout/${id}`)} variant="primary" className="text-white fw-bold rounded-pill px-3 ">  <FontAwesomeIcon style={{ height: '' }} className='' icon={faArrowRightLong} /> Checkout</Button>
                 </Card.Body>
 
             </Card>
