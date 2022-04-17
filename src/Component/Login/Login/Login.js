@@ -27,10 +27,7 @@ const Login = () => {
         navigate(from, { replace: true });
         console.log(user)
     }
-    let errorText;
-    if (error || error1) {
-        errorText = <p>{error?.message}</p>
-    }
+
     if (loading || sending) {
         return <Loading></Loading>
     }
@@ -51,6 +48,10 @@ const Login = () => {
         }
 
     }
+    let errorText;
+    if (error || error1) {
+        errorText = <p>{error?.message}</p>
+    }
     return (
         <div style={{ height: '180vw' }} className='w-50 mx-auto mt-5'>
             <h2 className='mb-5 text-primary'> Please Login</h2>
@@ -70,8 +71,9 @@ const Login = () => {
                 </Button>
             </Form>
             <p className='mt-3'>Are you new in Solo-Tourist-Guide ? please <span> <Link className='text-decoration-none' to='/signup'>sign up</Link> </span></p>
-            <p>Forget Your password? <span style={{ cursor: 'pointer' }} className='text-primary' onClick={handleResetPassword}>reset password</span></p>
             <ToastContainer />
+            <p>Forget Your password? <span style={{ cursor: 'pointer' }} className='text-primary' onClick={handleResetPassword}>reset password</span></p>
+
             <Social></Social>
         </div >
     );
