@@ -6,9 +6,12 @@ import hill1 from '../../img/hill1.jpg'
 import sea1 from '../../img/sea1.jpg'
 import useService from '../../Hooks/useService';
 import ServiceItem from '../ServiceItem/ServiceItem';
+import useEvents from '../../Hooks/useEvents';
+import Event from '../Event/Event';
 const Home = () => {
 
     const [service, setService] = useService()
+    const [events, setEvents] = useEvents()
     return (
         <div>
             <Carousel>
@@ -61,6 +64,22 @@ const Home = () => {
                         }
                     </Row>
                 </Container>
+            </div>
+            <div>
+                <h2 className='text-primary mt-5 text-center'>Upcoming serprising events</h2>
+                <Container>
+
+                    <Row>
+                        {
+                            events.map(event => <Event
+                                key={event.id}
+                                event={event}
+
+                            ></Event>)
+                        }
+                    </Row>
+                </Container>
+
 
 
             </div>

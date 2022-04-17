@@ -6,6 +6,7 @@ import auth from './../../../firebase.init';
 import Loading from '../Loading/Loading';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Social from '../Social/Social';
 const Signup = () => {
     const nameRef = useRef('')
     const emailRef = useRef('')
@@ -66,15 +67,17 @@ const Signup = () => {
                     <Form.Control ref={passwordRef} type="password" placeholder="Password" required />
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                    <Form.Check onClick={() => setPermission(!permission)} type="checkbox" label="Are you agree to Tour-guide-site terms and condition?" />
+                    <Form.Check onClick={() => setPermission(!permission)} type="checkbox" label="Are you agree to Solo-Tourist-Guide  terms and condition?" />
                 </Form.Group>
                 <p className='text-danger'>{errorText}</p>
-                <Button disabled={!permission} variant="primary" type="submit">
+                <Button disabled={!permission} variant="primary" type="submit" className='rounded-pill px-5 fw-bolder fs-6'>
                     Sign up
                 </Button>
-                <ToastContainer />
+
             </Form>
+            <ToastContainer />
             <p className='mt-3'>Allready have an account ? please <span> <Link className='text-decoration-none' to='/login'>login</Link> </span></p>
+            <Social></Social>
         </div>
     );
 };

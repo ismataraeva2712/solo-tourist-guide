@@ -10,6 +10,7 @@ import Header from './Component/Header/Header';
 import Home from './Component/Home/Home';
 import Login from './Component/Login/Login/Login';
 import Signup from './Component/Login/Signup/Signup';
+import NotFound from './Component/NotFound/NotFound';
 import RequireAuth from './Component/RequirAuth/RequireAuth';
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
         }></Route>
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/signup' element={<Signup></Signup>}></Route>
+        <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
       <Footer></Footer>
 

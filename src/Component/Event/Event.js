@@ -1,10 +1,10 @@
 import React from 'react';
-import { Button, Card, } from 'react-bootstrap';
+import { Button, Card } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
-import './ServiceItem.css'
-const ServiceItem = ({ serviceItem }) => {
+
+const Event = ({ event }) => {
     const navigate = useNavigate()
-    const { name, picture, description, price } = serviceItem
+    const { name, description, picture, price, date } = event
     return (
         <div className='col-12 col-md-6 col-lg-4 g-5'>
 
@@ -12,13 +12,18 @@ const ServiceItem = ({ serviceItem }) => {
                 <Card.Img style={{ height: '200px' }} className='w-100' variant="top" src={picture} />
                 <Card.Body>
                     <Card.Title>{name}</Card.Title>
+
+                    <Card.Text className='fw-bolder'>
+                        Date and time : {date}
+                    </Card.Text>
+                    <Card.Text className='fw-bolder'>
+                        Package Fee : per person ${price}
+                    </Card.Text>
                     <Card.Text>
                         {description}
                     </Card.Text>
-                    <Card.Text className='fw-bold'>
-                        Package Fee : per person ${price}
-                    </Card.Text>
-                    <Button onClick={() => navigate('/checkout')} variant="primary" className="text-white fw-bold rounded-pill px-3 ">Checkout</Button>
+
+                    <Button onClick={() => navigate('/checkout')} variant="primary" className="text-white fw-bold rounded-pill px-3 ">Booking</Button>
                 </Card.Body>
 
             </Card>
@@ -28,4 +33,4 @@ const ServiceItem = ({ serviceItem }) => {
     );
 };
 
-export default ServiceItem;
+export default Event;

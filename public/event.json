@@ -1,0 +1,26 @@
+[
+    {
+        "id": "1",
+        "description": "In this year first time i arrange Thailand trip and you will get big big 30% discount,we roaming thailand special special zone,as like bankok,pataya,crabi,phuket.not including air ticket",
+        "picture": "https://i.ibb.co/sQzHcRJ/thailand.jpg",
+        "price": 1000,
+        "name": "Thailand surprising trip",
+        "date": "1st june-9th june (8 days & 9 night)"
+    },
+    {
+        "id": "2",
+        "description": "middle of the june in rany season i arrange kewkradong ,bandorban trip..first we go bogalake..1 nigth stand then next day we will summit kewkradong and stay kewkradong pick.are you guys excited for hiking??then book this package.",
+        "picture": "https://i.ibb.co/64Z6pVC/hill4.jpg",
+        "price": 120,
+        "name": "Summit Kewkradong hill",
+        "date": "15th june-18th june(2days & 3 night)"
+    },
+    {
+        "id": "3",
+        "description": "I arrange last of the june budget  maldives trip.you will get private villa on the indian occean,available resort and spa,many water activities and infinity swimming poll,not including air ticket",
+        "picture": "https://i.ibb.co/xM8SQbd/sea3.jpg",
+        "price": 800,
+        "name": "mafushi,male,holumale trip ",
+        "date": "27Th june-4th july(6days & 7 night)"
+    }
+]

@@ -7,6 +7,7 @@ import auth from '../../../firebase.init';
 import Loading from '../Loading/Loading';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Social from '../Social/Social';
 const Login = () => {
     const emailRef = useRef('')
     const passwordRef = useRef('')
@@ -56,21 +57,22 @@ const Login = () => {
             <Form onSubmit={handleLogin}>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label>Email address</Form.Label>
-                    <Form.Control ref={emailRef} type="email" placeholder="Enter email" />
+                    <Form.Control ref={emailRef} type="email" placeholder="Enter email" required />
                 </Form.Group>
 
                 <Form.Group className="mb-3" controlId="formBasicPassword">
                     <Form.Label>Password</Form.Label>
-                    <Form.Control ref={passwordRef} type="password" placeholder="Password" />
+                    <Form.Control ref={passwordRef} type="password" placeholder="Password" required />
                 </Form.Group>
                 <p className='text-danger'>{errorText}</p>
-                <Button variant="primary" type="submit">
+                <Button className='rounded-pill px-5 fw-bolder fs-6' variant="primary" type="submit">
                     Login
                 </Button>
             </Form>
-            <p className='mt-3'>New in Tourist-guide-site ? please <span> <Link className='text-decoration-none' to='/signup'>sign up</Link> </span></p>
+            <p className='mt-3'>Are you new in Solo-Tourist-Guide ? please <span> <Link className='text-decoration-none' to='/signup'>sign up</Link> </span></p>
             <p>Forget Your password? <span style={{ cursor: 'pointer' }} className='text-primary' onClick={handleResetPassword}>reset password</span></p>
             <ToastContainer />
+            <Social></Social>
         </div >
     );
 };
