@@ -45,7 +45,7 @@ const Checkout = () => {
                     <Form.Label>Your Opinion</Form.Label>
                     <Form.Control type="text" placeholder="Enter your opinion" required />
                 </Form.Group>
-                <ToastContainer />
+
                 <Button variant="primary" type="submit" className='rounded-pill fw-bolder'>
                     <FontAwesomeIcon style={{ height: '16px' }} className='me-2 ' icon={faUserAlt} />
                     checkout  Booking

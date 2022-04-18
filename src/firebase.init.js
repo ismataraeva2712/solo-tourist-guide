@@ -11,7 +11,7 @@ const firebaseConfig = {
     projectId: "tourist-guide-e4792",
     storageBucket: "tourist-guide-e4792.appspot.com",
     messagingSenderId: "86511151757",
-    appId: "1:86511151757:web:cf41bc5a3d4c9bd86990c4"
+    appId: "1:86511151757:web:cf41bc5a3d4c9bd86990c4",
 };
 
 // Initialize Firebase

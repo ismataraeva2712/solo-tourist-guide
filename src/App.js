@@ -12,7 +12,7 @@ import Login from './Component/Login/Login/Login';
 import Signup from './Component/Login/Signup/Signup';
 import NotFound from './Component/NotFound/NotFound';
 import RequireAuth from './Component/RequirAuth/RequireAuth';
-
+import { ToastContainer } from 'react-toastify';
 function App() {
   return (
     <div className="">
@@ -31,6 +31,7 @@ function App() {
         <Route path='/signup' element={<Signup></Signup>}></Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
+      <ToastContainer />
       <Footer></Footer>
 
     </div>

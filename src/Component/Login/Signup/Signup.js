@@ -13,8 +13,6 @@ const Signup = () => {
     const passwordRef = useRef('')
     const navigate = useNavigate()
     const [permission, setPermission] = useState(false)
-
-
     const [
         createUserWithEmailAndPassword,
         user,
@@ -45,12 +43,8 @@ const Signup = () => {
         navigate('/home')
 
     }
-
-
-
-
     return (
-        <div style={{ height: '200vw' }} className='w-50 mx-auto mt-5'>
+        <div className='w-50 mx-auto mt-5'>
             <h2 className='mb-5 text-primary'> Please Sign-up</h2>
             <Form onSubmit={handleSignup}>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -75,7 +69,7 @@ const Signup = () => {
                 </Button>
 
             </Form>
-            <ToastContainer />
+
             <p className='mt-3'>Allready have an account ? please <span> <Link className='text-decoration-none' to='/login'>login</Link> </span></p>
             <Social></Social>
         </div>

@@ -10,7 +10,7 @@ const ServiceItem = ({ serviceItem }) => {
     return (
         <div className='col-12 col-md-6 col-lg-4 g-5'>
 
-            <Card className=' shadow-sm' >
+            <Card className='shadow-sm' >
                 <Card.Img style={{ height: '200px' }} className='w-100' variant="top" src={picture} />
                 <Card.Body>
                     <Card.Title>{name}</Card.Title>

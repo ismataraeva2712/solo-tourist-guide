@@ -1,10 +1,14 @@
 import React from 'react';
 import { Container } from 'react-bootstrap';
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faClipboardQuestion } from '@fortawesome/free-solid-svg-icons'
 const Blog = () => {
     return (
-        <div style={{ height: '300vw' }}>
-            <Container>
+        <div>
+            <div className='w-75 mx-auto'>
+                <div className='text-center mt-3'>
+                    <FontAwesomeIcon style={{ height: '100px' }} className='me-2 text-primary ' icon={faClipboardQuestion} />
+                </div>
                 <h4 className='mt-5 text-primary'>1. Difference between authentication and authorization?</h4>
                 <p>
                     # Authentication checks the persom's identity to grant access to the system . Authorization checks the person's permission to access the resource.
@@ -17,8 +21,29 @@ const Blog = () => {
                 <p>I am  Using firebase  for authentication.Firebase authentication system has many methods as like email-password method,google sign in method,facebook sign in method,github sign in method etc.so i think to build authintication system in my website then firebase is the best option.
                     <br />
                     Others authentication platforms:-
+                    <br />
+                    1.Amazone cognito
+                    <br />
+                    2.oneLogin
+                    <br />
+                    3. okta
+                    <br />
+                    4. stytch
+                    <br />
+                    5.ory
+                    <br />
+                    6.supabase
+                    <br />
+                    7.pingldentity
+                    <br />
+                    8.keyloak
+                    <br />
+                    9.frontegg
+                    <br />
 
-                    Amazone cognito,oneLogin,okta, stytch,ory,supabase,pingldentity,keyloak,frontegg,Authress,Auth0.
+                    10.Authress
+                    <br />
+                    11.Auth0.
                 </p>
                 <h4 className=' text-primary'>3 What other services does firebase provide other than authentication</h4>
                 <p>
@@ -31,7 +56,7 @@ const Blog = () => {
 
                 </p>
 
-            </Container>
+            </div>
         </div>
     );
 };
